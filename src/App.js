@@ -9,7 +9,10 @@ import {
 
 import Title from './slides/title';
 import Housekeeping from './slides/housekeeping';
-import WhatIsReact from 'slides/WhyReact';
+import WhatIsReact1 from 'slides/WhatIsReact1';
+import WhatIsReact2 from 'slides/WhatIsReact2';
+import WhyReact from 'slides/WhyReact';
+import Others from 'slides/Others';
 import Component from 'slides/Component';
 
 // Theme
@@ -33,7 +36,10 @@ class App extends React.Component {
         <Deck theme={theme}>
           <Title />
           <Housekeeping />
-          <WhatIsReact />
+          <WhatIsReact1 />
+          <WhatIsReact2 />
+          <WhyReact />
+          <Others />
           <Component />
         </Deck>
       </JssProvider>

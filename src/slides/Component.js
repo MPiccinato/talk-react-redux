@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 import { CodePane } from 'spectacle';
 import Typography from '@material-ui/core/Typography';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import Divider from '@material-ui/core/Divider';
 
 import Slide from 'components/Slide';
 import SlideTitle from 'components/SlideTitle';
@@ -14,7 +17,8 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = (theme) => {
   return {
     slideContent: {
-      display: 'flex' 
+      display: 'flex',
+      marginTop: '60px'
     },
     codePane: {
       fontSize: '1rem',
@@ -46,9 +50,21 @@ class AComponent extends Component {
             className={classes.codePane}
             source={CodeExample}
           />
-          <ul>
-            <li> All React components have a render method </li>
-          </ul>
+          <Typography variant='display1'>
+            <List>
+              <ListItem> 
+                All React components have a render method 
+              </ListItem>
+              <Divider />
+              <ListItem> 
+                Returns a tree of React components which will be turned into HTML
+              </ListItem>
+              <Divider />
+              <ListItem> 
+                Accepts a set of Props which can be any type of object Javascript supports
+              </ListItem>
+            </List>
+          </Typography>
         </SlideContent>
       </Slide>
     );
