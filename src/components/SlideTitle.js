@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import { Heading } from 'spectacle';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -12,9 +13,18 @@ const styles = (theme) => {
 }
 
 class SlideTitle extends Component {
+  static defaultProps = {
+    variant: 'display4'
+  }
+
   render() {
+    const {
+      children,
+      ...otherProps
+    } = this.props;
+
     return (
-      <Typography variant='display4' className={this.props.classes.root}>
+      <Typography {...otherProps}>
         {this.props.children} 
       </Typography>
     );

@@ -1,4 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
+import JssProvider from 'react-jss/lib/JssProvider';
+import { create } from 'jss';
+import { createGenerateClassName, jssPreset } from '@material-ui/core/styles';
 
 import {
   Deck,
@@ -6,6 +9,8 @@ import {
 
 import Title from './slides/title';
 import Housekeeping from './slides/housekeeping';
+import WhatIsReact from 'slides/WhyReact';
+import Component from 'slides/Component';
 
 // Theme
 import createTheme from 'spectacle/lib/themes/default';
@@ -16,14 +21,22 @@ const theme = createTheme({
   quarternary: 'lightgray'
 });
 
+// JSS Config
+const generateClassName = createGenerateClassName();
+const jss = create(jssPreset());
+jss.options.insertionPoint = document.getElementById('jss-insertion-point');
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <Deck theme={theme}>
-        <Title />
-        <Housekeeping />
-			</Deck>
+      <JssProvider jss={jss} generateClassName={generateClassName}>
+        <Deck theme={theme}>
+          <Title />
+          <Housekeeping />
+          <WhatIsReact />
+          <Component />
+        </Deck>
+      </JssProvider>
     );
   }
 }

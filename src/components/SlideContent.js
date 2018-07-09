@@ -25,7 +25,8 @@ class SlideContent extends Component {
         className={
           classnames(
             this.props.classes.root,
-            this.props.classes[this.props.align]
+            this.props.classes[this.props.align],
+            this.props.className
           )
         }
       >
