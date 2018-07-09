@@ -14,6 +14,7 @@ import WhatIsReact2 from 'slides/WhatIsReact2';
 import WhyReact from 'slides/WhyReact';
 import Others from 'slides/Others';
 import Component from 'slides/Component';
+import JSX from 'slides/JSX';
 
 // Theme
 import createTheme from 'spectacle/lib/themes/default';
@@ -41,6 +42,7 @@ class App extends React.Component {
           <WhyReact />
           <Others />
           <Component />
+          <JSX />
         </Deck>
       </JssProvider>
     );
