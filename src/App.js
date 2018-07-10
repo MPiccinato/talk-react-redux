@@ -13,8 +13,15 @@ import WhatIsReact1 from 'slides/WhatIsReact1';
 import WhatIsReact2 from 'slides/WhatIsReact2';
 import WhyReact from 'slides/WhyReact';
 import Others from 'slides/Others';
+import ReactComponentsTitle from './slides/ReactComponentsTitle';
 import Component from 'slides/Component';
+import ComponentFunctional from 'slides/ComponentFunctional';
+import ComponentsAreFunctional from 'slides/ComponentsAreFunctional';
 import JSX from 'slides/JSX';
+import JSX2 from 'slides/JSX2';
+import AllTogether from 'slides/AllTogether';
+import PassingProps from 'slides/PassingProps';
+import PropsAndPropTypes from 'slides/PropsAndPropTypes';
 
 // Theme
 import createTheme from 'spectacle/lib/themes/default';
@@ -41,8 +48,15 @@ class App extends React.Component {
           <WhatIsReact2 />
           <WhyReact />
           <Others />
+          <ReactComponentsTitle />
           <Component />
+          <ComponentFunctional />
+          <ComponentsAreFunctional />
           <JSX />
+          <JSX2 />
+          <AllTogether />
+          <PassingProps />
+          <PropsAndPropTypes />
         </Deck>
       </JssProvider>
     );

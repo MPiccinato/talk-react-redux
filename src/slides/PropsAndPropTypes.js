@@ -17,12 +17,13 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = (theme) => {
   return {
     slideContent: {
+      display: 'flex',
       marginTop: '60px',
     },
     codePane: {
       fontSize: '1rem',
-      maxWidth: '70%',
-      minWidth: '70%',
+      maxWidth: '50%',
+      minWidth: '50%',
       '& pre': {
         maxWidth: 800,
         minWidth: '100%'
@@ -31,15 +32,15 @@ const styles = (theme) => {
   };
 }
 
-class JSX extends Component {
+class PropsAndPropTypes extends Component {
   render() {
     const { classes } = this.props;
 
     return (
       <Slide align='flex-start flex-start'>
-        <SlideTitle variant='display4'>JSX</SlideTitle>
+        <SlideTitle variant='display3'>Props and PropTypes</SlideTitle>
         <SlideContent 
-          align='center' 
+          align='left' 
           className={classes.slideContent} 
         >
           <CodePane
@@ -47,9 +48,14 @@ class JSX extends Component {
             className={classes.codePane}
             source={CodeExample}
           />
-          <p>
-            JSX provides syntactic sugar for the React.createElement function
-          </p>
+          <Typography variant='headline'>
+            <List>
+              <ListItem>
+              </ListItem>
+              <ListItem>
+              </ListItem>
+            </List>
+          </Typography>
         </SlideContent>
       </Slide>
     );
@@ -57,16 +63,22 @@ class JSX extends Component {
 }
 
 const CodeExample = 
-`  // JSX
-  const Hello = (props) => (
-    <div>Hello!</div>
+`
+  const ArticleHeading = (props) => (
+    <div>
+      <h1>{ props.title }</h1> 
+      <h2>written by { props.name }</h2>
+      <p>{ props.description }</p>
+    </div>
   )
 
-  // After
-  const Hello = (props) => (
-    React.createElement('div', null, 'Hello!');
-  );
+  <ArticleHeading 
+    title='JSX is Awesome' 
+    name='David Jones' 
+    description='Some long text...'
+  />
+
 `;
 
 
-export default withStyles(styles)(JSX);
+export default withStyles(styles)(PropsAndPropTypes);
