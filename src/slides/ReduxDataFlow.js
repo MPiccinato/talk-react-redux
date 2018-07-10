@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 
 import { CodePane } from 'spectacle';
-import Typography from '@material-ui/core/Typography';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
+import ReduxFlow from 'icons/redux.gif';
 
 import Slide from 'components/Slide';
 import SlideTitle from 'components/SlideTitle';
 import SlideContent from 'components/SlideContent';
 
+import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = (theme) => {
@@ -47,11 +46,12 @@ class ReduxDataFlow extends Component {
           Redux Data Flow
         </SlideTitle>
         <SlideContent 
-          align='left' 
+          align='center' 
           className={classes.slideContent} 
         >
+          <img src={ReduxFlow} style={{ width: '80%', height: '80%' }} />
           <Typography variant='headline' component='p'>
-
+            <b>Uni-directional data flow</b> is Redux's bread and butter. This is opposed to other ideas such as two-way data binding.
           </Typography>
         </SlideContent>
       </Slide>

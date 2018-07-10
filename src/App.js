@@ -32,6 +32,9 @@ import ReduxConcepts from 'slides/ReduxConcepts';
 import ReduxConcepts2 from 'slides/ReduxConcepts2';
 import ReduxConcepts3 from 'slides/ReduxConcepts3';
 import ReduxDataFlow from 'slides/ReduxDataFlow';
+import ReactAndRedux from 'slides/ReactAndRedux';
+import DemoTitle from 'slides/DemoTitle';
+import Summary from 'slides/Summary';
 
 // Theme
 import createTheme from 'spectacle/lib/themes/default';
@@ -77,6 +80,9 @@ class App extends React.Component {
           <ReduxConcepts2 />
           <ReduxConcepts3 />
           <ReduxDataFlow />
+          <ReactAndRedux />
+          <DemoTitle />
+          <Summary />
         </Deck>
       </JssProvider>
     );
