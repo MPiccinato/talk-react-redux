@@ -27,6 +27,10 @@ import ComponentState2 from 'slides/ComponentState2';
 import ViewEqualsFunctionOfState from 'slides/ViewEqualsFunctionOfState';
 import ReduxTitle from 'slides/ReduxTitle';
 import WhatIsRedux1 from 'slides/WhatIsRedux1';
+import WhatIsRedux2 from 'slides/WhatIsRedux2';
+import ReduxConcepts from 'slides/ReduxConcepts';
+import ReduxConcepts2 from 'slides/ReduxConcepts2';
+import ReduxConcepts3 from 'slides/ReduxConcepts3';
 
 // Theme
 import createTheme from 'spectacle/lib/themes/default';
@@ -67,6 +71,10 @@ class App extends React.Component {
           <ViewEqualsFunctionOfState />
           <ReduxTitle />
           <WhatIsRedux1 />
+          <WhatIsRedux2 />
+          <ReduxConcepts />
+          <ReduxConcepts2 />
+          <ReduxConcepts3 />
         </Deck>
       </JssProvider>
     );
