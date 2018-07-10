@@ -22,6 +22,11 @@ import JSX2 from 'slides/JSX2';
 import AllTogether from 'slides/AllTogether';
 import PassingProps from 'slides/PassingProps';
 import PropsAndPropTypes from 'slides/PropsAndPropTypes';
+import ComponentState from 'slides/ComponentState';
+import ComponentState2 from 'slides/ComponentState2';
+import ViewEqualsFunctionOfState from 'slides/ViewEqualsFunctionOfState';
+import ReduxTitle from 'slides/ReduxTitle';
+import WhatIsRedux1 from 'slides/WhatIsRedux1';
 
 // Theme
 import createTheme from 'spectacle/lib/themes/default';
@@ -57,6 +62,11 @@ class App extends React.Component {
           <AllTogether />
           <PassingProps />
           <PropsAndPropTypes />
+          <ComponentState />
+          <ComponentState2 />
+          <ViewEqualsFunctionOfState />
+          <ReduxTitle />
+          <WhatIsRedux1 />
         </Deck>
       </JssProvider>
     );

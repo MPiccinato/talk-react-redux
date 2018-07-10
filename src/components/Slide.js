@@ -7,7 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = (theme) => {
   return {
     root: {
-      //maxWidth: '90% !important'
+      position: 'relative'
     }
   };
 }
