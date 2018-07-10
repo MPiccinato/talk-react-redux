@@ -36,58 +36,27 @@ const styles = (theme) => {
   };
 }
 
-class ReduxConcepts2 extends Component {
+class ReduxDataFlow extends Component {
   
-  state = { counter: 0 };
-
   render() {
     const { classes } = this.props;
 
     return (
       <Slide align='flex-start flex-start'>
         <SlideTitle variant='display3'>
-          Redux Concepts
+          Redux Data Flow
         </SlideTitle>
         <SlideContent 
           align='left' 
           className={classes.slideContent} 
         >
-          <CodePane
-            lang='jsx'
-            className={classes.codePane}
-            source={CodeExample}
-          />
-          <div>
-            <Typography variant='display2'>Reducers</Typography>
-            <Typography variant='headline' component='p'>
-              State update logic is handled by functions in a <b>reducer</b>, which is also just a function. Actions are handled in a first in last out order and only one is handled at a time. This makes reducers very easily testable and straightforward.
-              <br />
-              <br />
-              Reducers must return a new object and treat incoming state and actions as immutable. State is generally copied, mutated and then returned.
-            </Typography>
-          </div>
+          <Typography variant='headline' component='p'>
+
+          </Typography>
         </SlideContent>
       </Slide>
     );
   }
 }
 
-const CodeExample = `
-const ACTION_HANDLERS = {
-  'ADD_TODO': (state, action) => {
-    return {
-      todos: [
-        ...state.todos,
-        action.todo
-      ]
-    }
-  }
-};
-
-function settingsReducer(state, action) {
-  return ACTION_HANDLERS[action.type] || state;
-}
-
-`;
-
-export default withStyles(styles)(ReduxConcepts2);
+export default withStyles(styles)(ReduxDataFlow);
