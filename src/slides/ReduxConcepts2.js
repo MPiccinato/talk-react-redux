@@ -62,7 +62,7 @@ class ReduxConcepts2 extends Component {
             <div>
               <Typography variant='display2'>Actions</Typography>
               <Typography variant='headline' component='p'>
-                Application state is stored as a plain object. There is no way to directly manipulate it.
+                These are plain Javascript objects that are dispatched to reducers
               </Typography>
             </div>
           </div>
@@ -76,7 +76,7 @@ class ReduxConcepts2 extends Component {
             <div>
               <Typography variant='display2'>Action Creators</Typography>
               <Typography variant='headline' component='p'>
-                Application state is stored as a plain object. There is no way to directly manipulate it.
+                Special functions that assist in creating Action objects. Useful for sending UI input or bits of data to be handled in middlewares or reducers.
               </Typography>
             </div>
           </div>
@@ -91,7 +91,7 @@ class ReduxConcepts2 extends Component {
 const CodeExampleAction = `
 
 { type: 'ADD_TODO', text: 'Feed the cats' }
-{ type: 'DELELE_TOD', id: 3 }
+{ type: 'DELETE_TODO', id: 3 }
 
 
 `;

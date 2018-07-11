@@ -22,8 +22,8 @@ const styles = (theme) => {
     },
     codePane: {
       fontSize: '1rem',
-      maxWidth: '50%',
-      minWidth: '50%',
+      maxWidth: '70%',
+      minWidth: '70%',
       padding: 8,
       '& pre': {
         maxWidth: 800,
@@ -104,7 +104,7 @@ class Counter extends React.Component {
 
 const CodeExample = `
 class Counter extends React.Component {
-  state = { count: 0 };
+  state = { counter: 0 };
 
   onClick = () => {
     this.setState({
@@ -115,7 +115,8 @@ class Counter extends React.Component {
   render() {
     return (
       <div>
-        <Button onClick={this.onClick()}> Click Me </Button>
+        <div>Clicked {this.state.counter} times </div>
+        <Button onClick={this.onClick}> Click Me </Button>
       </div>
     );
   }

@@ -21,7 +21,7 @@ class ReactAndRedux extends Component {
           <br />
           <Typography variant='display2'>A Connected UI</Typography>
           <Typography variant='headline' component='p'>
-            React is efficient, most of the time, at updating your UI when reacting to prop changes. Redux helps connect components to your applications state in a way that is easy to follow. Each action is applied synchronously and the UI is updated in the same manor.
+            React is efficient, most of the time, at updating your UI when reacting to prop changes. Redux helps connect components to your applications state in a way that is easy to follow. Each action is applied synchronously and the UI is updated in the same manner.
           </Typography>
         </SlideContent>
       </Slide>
